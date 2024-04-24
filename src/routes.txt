@@ -1,0 +1,7 @@
+// Enable parameterized route rendering in angular.json under prerendering
+// Add routesFile option with this text routesFile
+
+// Examples following projects/:id
+/projects/1
+/projects/2
+/projects/10
