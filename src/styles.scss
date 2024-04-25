@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'app/styles/theme/color' as c;
+@use 'app/styles/theme/type' as t;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --tui-font-text: #{t.$font-text};
+  --tui-primary: #{c.$primary};
+  --tui-primary-text: #{c.$primary-text};
+  --tui-base-01: #{c.$background};
+  --tui-text-01: #{c.$primary-text};
+}
+
+/* Disable image dragging by default */
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+}
+
+.flex {
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
+  &.row {
+    flex-direction: row;
+  }
+  &.m-start {
+    justify-content: flex-start;
+  }
+  &.m-center {
+    justify-content: center;
+  }
+  &.m-end {
+    justify-content: flex-end;
+  }
+  &.m-sb {
+    justify-content: space-between;
+  }
+  &.c-start {
+    align-items: start;
+  }
+  &.c-center {
+    align-items: center;
+  }
+  &.c-end {
+    align-items: end;
+  }
+}
+
+.drop-shadow {
+  box-shadow: var(--tui-shadow);
+
+  &-nav {
+    box-shadow: var(--tui-shadow-dropdown);
+  }
+  &-dropdown {
+    box-shadow: var(--tui-shadow-dropdown);
+  }
+}
