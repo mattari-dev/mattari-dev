@@ -5,16 +5,16 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration, withHttpTransferCacheOptions } from '@angular/platform-browser';
+import { provideStore } from '@ngrx/store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-        provideAnimations(),
-        provideRouter(routes),
-    provideClientHydration(
-      withHttpTransferCacheOptions({
+    provideAnimations(),
+    provideRouter(routes),
+    provideClientHydration(withHttpTransferCacheOptions({
         includePostRequests: true,
-      }),
-    ),
-        importProvidersFrom(TuiRootModule)
-    ],
+    })),
+    importProvidersFrom(TuiRootModule),
+    provideStore()
+  ],
 };
