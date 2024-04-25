@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<div id="navbar-component" class="flex row m-center c-center drop-shadow-nav">
+  <div id="navbar-content" class="flex row m-sb">
+    <div id="left-content" class="flex row m-start">
+      <a routerLink="/" class="nav-link">
+        <app-icon [src]="logo_icon" type="nav-icon"></app-icon>
+      </a>
+      <app-vertical-divider></app-vertical-divider>
+      <!-- Anchors -->
+    </div>
+    <div id="right-content">
+      <!-- Right aligned content -->
+      <!-- <a routerLink="/" routerLinkActive="active-link"></a> -->
+    </div>
+  </div>
+</div>

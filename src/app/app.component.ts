@@ -8,7 +8,14 @@ import { FooterComponent } from "./core/components/footer/footer.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TuiRootModule, TuiDialogModule, TuiAlertModule, NavbarComponent, FooterComponent],
+  imports: [
+    RouterOutlet,
+    TuiRootModule,
+    TuiDialogModule,
+    TuiAlertModule,
+    NavbarComponent,
+    FooterComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
     providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}]
