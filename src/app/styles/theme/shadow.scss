@@ -1,0 +1,8 @@
+@use "./color" as c;
+
+/* Shadow sizes */
+$shadow-xs: 0 4px 3px #{c.$shadow-colour};
+$shadow-s: 0 4px 5px #{c.$shadow-colour};
+$shadow-m: 0 4px 7px #{c.$shadow-colour};
+$shadow-l: 0 4px 9px #{c.$shadow-colour};
+$shadow-xl: 0 4px 12px #{c.$shadow-colour};

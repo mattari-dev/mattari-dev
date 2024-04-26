@@ -1,0 +1,37 @@
+$lighten-background: rgba(#f1f1f1, 0.15);
+$darken-background: rgba(#2b2b2b, 0.15);
+
+/* Filter mixins */
+@mixin lighten {
+  background-color: $lighten-background;
+  background-blend-mode: lighten;
+}
+
+@mixin darken {
+  background-color: $darken-background;
+  background-blend-mode: darken;
+}
+
+@mixin soft-light {
+  background-color: $darken-background;
+  background-blend-mode: soft-light;
+}
+
+@mixin multiply($color) {
+  background-color: $color;
+  background-blend-mode: multiply;
+}
+
+@mixin screen($color) {
+  background-color: $color;
+  background-blend-mode: screen;
+}
+
+@mixin blur($radius) {
+  backdrop-filter: blur($radius);
+  -webkit-backdrop-filter: blur($radius);
+}
+
+@mixin darken-image($percent) {
+  filter: brightness($percent);
+}
