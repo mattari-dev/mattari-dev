@@ -8,6 +8,24 @@
   width: 70%;
 }
 
-a .nav-link {
-  text-decoration: none;
+a.nav-link {
+  text-decoration: none !important;
+  color: var(--tui-primary-text);
+  font-size: 1.5em;
+  height: auto;
+
+  &.active-link {
+    text-decoration: underline !important;
+    text-underline-offset: 0.25em;
+  }
+  &:hover {
+    color: var(--tui-base-02);
+  }
+  &:active {
+    color: var(--tui-base-03);
+  }
+}
+
+app-vertical-divider {
+  height: 3.5em;
 }

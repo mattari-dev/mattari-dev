@@ -1,18 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'app/styles/theme/color' as c;
-@use 'app/styles/theme/type' as t;
+@use "app/styles/theme/color" as c;
+@use "app/styles/theme/type" as t;
+@use "app/styles/theme/shadow" as s;
 
 * {
   margin: 0;
   padding: 0;
 }
 
+:host {
+  display: contents;
+}
+
+/* Taiga UI overrides */
 :root {
+  /* Text overrides */
+  --tui-font-heading: #{t.$font-text};
   --tui-font-text: #{t.$font-text};
-  --tui-primary: #{c.$primary};
   --tui-primary-text: #{c.$primary-text};
-  --tui-base-01: #{c.$background};
   --tui-text-01: #{c.$primary-text};
+  --tui-text-02: #{c.$secondary-text};
+
+  /* Colour overrides */
+  --tui-primary: #{c.$secondary};
+  --tui-primary-hover: #{c.$tertiary};
+  --tui-primary-active: #{c.$secondary};
+  --tui-base-01: #{c.$background};
+  --tui-base-02: #{c.$secondary-background};
+  --tui-base-03: #{c.$tertiary-background};
+  --tui-link: #{c.$primary-text};
+  --tui-link-hover: #{c.$secondary-text};
+
+  /* Size overrides */
+  --tui-height-xs: 2rem;
+  --tui-height-s: 2.75rem;
+  --tui-height-m: 3.5rem;
+  --tui-height-l: 5rem;
+  --tui-padding-s: 1rem;
+  --tui-padding-m: 2rem;
+  --tui-padding-l: 3rem;
+  --tui-radius-xs: 0.25rem;
+  --tui-radius-s: 0.5rem;
+  --tui-radius-m: 0.75rem;
+  --tui-radius-l: 1rem;
+}
+
+[tuiButton][data-size="m"] {
+  --tui-padding: 2rem;
 }
 
 /* Disable image dragging by default */
@@ -62,15 +96,88 @@ img {
   &.c-end {
     align-items: end;
   }
+  &.gap-1 {
+    gap: 0.5em;
+  }
+  &.gap-2 {
+    gap: 1em;
+  }
+  &.gap-3 {
+    gap: 1.5em;
+  }
+  &.gap-4 {
+    gap: 2em;
+  }
+  &.gap-5 {
+    gap: 2.5em;
+  }
+  &.gap-6 {
+    gap: 3em;
+  }
+}
+
+.box-shadow {
+  &-xs {
+    box-shadow: #{s.$shadow-xs};
+  }
+  &-s {
+    box-shadow: #{s.$shadow-s};
+  }
+  &-m {
+    box-shadow: #{s.$shadow-m};
+  }
+  &-l {
+    box-shadow: #{s.$shadow-l};
+  }
+  &-xl {
+    box-shadow: #{s.$shadow-xl};
+  }
+}
+
+.text-shadow {
+  &-xs {
+    text-shadow: #{s.$shadow-xs};
+  }
+  &-s {
+    text-shadow: #{s.$shadow-s};
+  }
+  &-m {
+    text-shadow: #{s.$shadow-m};
+  }
+  &-l {
+    text-shadow: #{s.$shadow-l};
+  }
+  &-xl {
+    text-shadow: #{s.$shadow-xl};
+  }
 }
 
 .drop-shadow {
-  box-shadow: var(--tui-shadow);
-
-  &-nav {
-    box-shadow: var(--tui-shadow-dropdown);
+  &-xs {
+    filter: drop-shadow(#{s.$shadow-xs});
   }
-  &-dropdown {
-    box-shadow: var(--tui-shadow-dropdown);
+  &-s {
+    filter: drop-shadow(#{s.$shadow-s});
+  }
+  &-m {
+    filter: drop-shadow(#{s.$shadow-m});
+  }
+  &-l {
+    filter: drop-shadow(#{s.$shadow-l});
+  }
+  &-xl {
+    filter: drop-shadow(#{s.$shadow-xl});
+  }
+}
+
+.text {
+  &-start {
+    text-align: start;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-end {
+    text-align: end;
   }
 }

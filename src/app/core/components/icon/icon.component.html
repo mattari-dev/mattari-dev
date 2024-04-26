@@ -1,1 +1,4 @@
-<img [src]="src | safe: 'resourceUrl'" [class]="type" />
+<a *ngIf="href != null || undefined; else elseBlock" [href]="href | safe: 'url'" target="_blank">
+  <img [src]="src | safe: 'resourceUrl'" [class]="type" />
+</a>
+<ng-template #elseBlock><img [src]="src | safe: 'resourceUrl'" [class]="type" /></ng-template>
