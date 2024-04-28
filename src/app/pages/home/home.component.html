@@ -1,6 +1,6 @@
-<main id="home-component" class="flex column m-sb c-center gap-3">
-  <section id="banner-container" class="flex column m-center c-center box-shadow-m">
-    <div id="banner-content" class="flex column m-sb c-center gap-4">
+<main id="home-component" class="flex-column m-sb c-center gap-3">
+  <section id="banner-container" class="flex-column m-center c-center box-shadow-m">
+    <div id="banner-content" class="flex-column m-sb c-center gap-4">
       <img id="banner-image" src="assets/images/logo_banner.svg" class="drop-shadow-m"/>
       <h1 class="tui-text_h2 text-shadow-m text-center">mattari.dev</h1>
       <p class="tui-text_h4 text-shadow-m text-center">The home of inspiration and innovation</p>
@@ -15,13 +15,13 @@
       </button>
     </div>
   </section>
-  <section id="featured-container" class="flex column m-sb gap-6 c-center">
-    <div id="featured-heading" class="flex column m-sb gap-3 c-center">
+  <section id="featured-container" class="flex-column m-sb gap-6 c-center">
+    <div id="featured-heading" class="flex-column m-sb gap-3 c-center">
       <h1 class="tui-text_h2">Featured</h1>
       <p class="tui-text_body-l">Check out some of my favourite projects</p>
     </div>
     <app-horizontal-divider></app-horizontal-divider>
-    <div id="featured-projects" class="flex row m-sb c-center">
+    <div id="featured-projects" class="flex-row m-sb c-center">
       <h1 class="tui-text_h2" *ngFor="let x of projects">{{"Project " + x.id}}</h1>
     </div>
     <h1 class="tui-text_h2">Development in progress!</h1>

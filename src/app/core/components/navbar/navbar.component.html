@@ -1,6 +1,6 @@
-<nav id="navbar-component" class="flex row m-center c-center box-shadow-m">
-  <div id="navbar-content" class="flex row m-sb">
-    <div id="left-content" class="flex row m-sb c-center gap-6">
+<nav id="navbar-component" class="flex-row m-center c-center box-shadow-m">
+  <div id="navbar-content" class="flex-row m-sb">
+    <div id="left-content" class="flex-row m-sb c-center gap-6">
       <a routerLink="/">
         <app-icon [src]="logo_icon" type="icon-5"></app-icon>
       </a>
@@ -8,14 +8,14 @@
       <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class="nav-link">
         Home
       </a>
-      <a routerLink="/projects" routerLinkActive="active-link" class="nav-link">
+      <a routerLink="/projects" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"  class="nav-link">
         Projects
       </a>
-      <a routerLink="/about" routerLinkActive="active-link" class="nav-link">
+      <a routerLink="/about" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"  class="nav-link">
         About
       </a>
     </div>
-    <div id="right-content" class="flex row m-sb c-center gap-6">
+    <div id="right-content" class="flex-row m-sb c-center gap-6">
       <app-icon [src]="discord_icon" href="https://google.com/" type="icon-4 icon-link"></app-icon>
       <app-icon [src]="youtube_icon" href="https://www.youtube.com/@mattaridev" type="icon-4 icon-link"></app-icon>
       <app-icon [src]="github_icon" href="https://github.com/m-a-s-h-e-d" type="icon-4 icon-link"></app-icon>

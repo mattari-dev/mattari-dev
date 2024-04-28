@@ -8,6 +8,7 @@
 #banner-container {
   @include f.screen(rgba(39, 55, 73, 0.05));
   width: 100%;
+  min-height: 660px;
   height: 60vh;
   background-image: url("/assets/images/banner_background.webp");
   background-size: cover;
@@ -28,9 +29,5 @@
 }
 
 #featured-projects {
-  width: 100%;
-}
-
-app-horizontal-divider {
   width: 100%;
 }

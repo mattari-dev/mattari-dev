@@ -69,10 +69,12 @@ img {
 .flex {
   display: flex;
 
-  &.column {
+  &-column {
+    @extend .flex;
     flex-direction: column;
   }
-  &.row {
+  &-row {
+    @extend .flex;
     flex-direction: row;
   }
   &.m-start {
